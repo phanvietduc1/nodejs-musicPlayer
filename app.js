@@ -16,7 +16,10 @@ const trackRoutes = require('./routes/tracks');
 connectDB();
 
 // Routes
-app.use('/', require('./routes/index'));
+app.use('/', require('./routes/userRoute'));
+app.use('/', require('./routes/songRoute'));
+app.use('/', require('./routes/artistRoute'));
+app.use('/', require('./routes/genreRoute'));
 app.use('/tracks', trackRoutes);
 
 const port = process.env.PORT || 1111;
